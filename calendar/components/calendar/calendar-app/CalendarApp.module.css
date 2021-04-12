@@ -1,0 +1,27 @@
+.calendar_bg {
+    background-color: #272829;
+    position: absolute;
+    right: 0px;
+    width: 704px;
+    height: 908px;
+}
+
+.calendar_wrapper {
+    position: absolute;
+    top: 209px;
+    left: 123px;
+    width: 467px;
+    height: 491px;
+}
+
+.calendar_day {
+    position: relative;
+    width: calc(100% / 7);
+    height: 44px;
+    display: inline-block;
+    color: #DFDFDF;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+}

@@ -1,0 +1,31 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 150px;
+}
+
+.navigation_logo {
+    width: 80%;
+    
+}
+
+.navigation_pages {
+    list-style: none;
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    color: #3d3d3d;
+    text-align: left;
+    font: medium 30px;
+    letter-spacing: 0.56px;
+    text-transform: uppercase;
+    margin-top: 70px;
+    margin-right: 110px;
+}
+
+.link {
+    text-decoration: none;
+}
