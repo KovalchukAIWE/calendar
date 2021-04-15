@@ -1,13 +1,18 @@
+//core
 import Head from 'next/head';
-import { Header } from '../../components/header/Header'
+//components
+import { Header } from '../../components/header/Header';
+//styles
+import styles from '../../styles/about_us.module.scss';
 
 export default function AboutUs () {
     return (
     <>
     <Head><title>About us</title></Head>
     <Header/>
-    <h1>Lorem ipsum creation timelines</h1>
-    <p>So how did the classical Latin become so incoherent? 
+    <div className={styles.text_wrapper}>
+    <h1 className={styles.text_main}>Lorem ipsum creation timelines</h1>
+    <p className={styles.text_description}>So how did the classical Latin become so incoherent? 
         According to McClintock, a 15th century typesetter likely
         scrambled part of Cicero's De Finibus in order to provide 
         placeholder text to mockup various fonts for a type specimen 
@@ -31,6 +36,7 @@ export default function AboutUs () {
           then-understood Latin was scrambled, it became as incomprehensible 
           as Greek; the phrase 'it's Greek to me' and 'greeking' have common 
           semantic roots!” (The editors published his letter in a correction headlined “Lorem Oopsum”).</p>
+          </div>
           </>
     )
 }

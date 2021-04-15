@@ -1,8 +1,8 @@
-import React from 'react';
+//styles
+import styles from  "../../../styles/calendarHeader.module.scss";
 
-import styles from './CalendarHeader.module.css';
 
-export default function CalendarHeader({value, setValue}) {
+export default function CalendarHeader({value, onChange}) {
     function currMonthName() {
         return value.format('MMMM')
     }
@@ -19,15 +19,23 @@ export default function CalendarHeader({value, setValue}) {
         return value.clone().add(1, 'month')
     }
 
-    return (
+
+      return (
         <div className={styles.calendar_header}>
-                <div className={styles.previous} onClick={() => setValue(prevMonth())}>{ String.fromCharCode(60) }</div>
-                <div className={styles.current}>
-                    {currMonthName()} {currYear()}
-                </div>
-                <div className={styles.next} onClick={() => setValue(nextMonth())}>{String.fromCharCode(62)}</div>
-            </div>
-    )
+          <div
+            className={styles.calendar_arrows}
+            onClick={() => onChange(prevMonth())}
+          >
+            {String.fromCharCode(171)}
+          </div>
+          <div>
+            {currMonthName()} {currYear()}
+          </div>
+          <div className={styles.calendar_arrows} onClick={() => onChange(nextMonth())}>
+            {String.fromCharCode(187)}
+          </div>
+        </div>
+      );
 }
 
 

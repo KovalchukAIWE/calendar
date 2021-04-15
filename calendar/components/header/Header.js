@@ -1,13 +1,14 @@
+//core
 import Link from 'next/link';
-import styles from './Header.module.css'
+//styles
+import styles from '../../styles/calendarHeader.module.scss';
 
 export function Header (  ){
     return (
         <>
             <nav className={styles.navigation}>
                 <div className={styles.navigation_logo}>
-                    <div>We</div>
-                    <div>Rdevs</div>
+                    <div className={styles.logo_img}></div>
                 </div>
                 <ul className={styles.navigation_pages}>
                     <li><Link href={'/about'}><a className={styles.link}>about us</a></Link></li>
